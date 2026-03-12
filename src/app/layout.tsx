@@ -17,6 +17,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://calderonpsychiatric.com"
+  ),
   title: "Calderon Psychiatric Services | Orange County, CA",
   description:
     "Board-certified Psychiatric Mental Health Nurse Practitioner providing compassionate, expert psychiatric care in Orange County, California. Specializing in anxiety, ADHD, depression, and more.",
