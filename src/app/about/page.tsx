@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -105,20 +106,21 @@ export default function AboutPage() {
       <section className="py-20 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-5 gap-16">
-            {/* Portrait Placeholder */}
             <div className="md:col-span-2">
-              <div className="bg-gradient-to-br from-navy to-navy-light rounded-2xl aspect-[3/4] flex items-end p-8 relative overflow-hidden">
-                <div className="absolute inset-0 opacity-20">
-                  <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gold/30 to-transparent" />
-                </div>
-                <div className="relative">
-                  <p className="font-serif text-2xl font-bold text-cream">
-                    Nicholas Calderon
-                  </p>
-                  <p className="text-gold text-sm mt-1">
-                    PMHNP-BC &middot; MSN &middot; BSN
-                  </p>
-                </div>
+              <div className="bg-gradient-to-br from-navy to-navy-light rounded-2xl aspect-[3/4] flex flex-col items-center justify-center p-8 relative overflow-hidden">
+                <Image
+                  src="/images/nicholas-calderon-headshot.avif"
+                  alt="Nicholas Calderon, PMHNP-BC"
+                  width={280}
+                  height={280}
+                  className="rounded-full object-cover border-4 border-gold/30 shadow-xl mb-6"
+                />
+                <p className="font-serif text-2xl font-bold text-cream text-center">
+                  Nicholas Calderon
+                </p>
+                <p className="text-gold text-sm mt-1">
+                  PMHNP-BC &middot; MSN &middot; BSN
+                </p>
               </div>
             </div>
 

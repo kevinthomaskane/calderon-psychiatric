@@ -164,6 +164,16 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
+              {/* Mobile headshot — visible below hero on small screens */}
+              <div className="flex justify-center mb-8 lg:hidden">
+                <Image
+                  src="/images/nicholas-calderon-headshot.avif"
+                  alt="Nicholas Calderon, PMHNP-BC"
+                  width={240}
+                  height={240}
+                  className="rounded-full object-cover shadow-lg border-2 border-gold/20"
+                />
+              </div>
               <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-3">
                 About Your Provider
               </p>
