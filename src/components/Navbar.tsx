@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { useState } from "react";
-import { usePathname } from "next/navigation";
+import Link from 'next/link';
+import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
-  { href: "/contact", label: "Contact" },
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/services', label: 'Services' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 export default function Navbar() {
@@ -24,7 +24,7 @@ export default function Navbar() {
             <div className="w-10 h-10 bg-navy rounded-lg flex items-center justify-center group-hover:bg-navy-light transition-colors">
               <span className="text-gold font-serif font-bold text-xl">C</span>
             </div>
-            <div className="hidden sm:block">
+            <div>
               <p className="font-serif text-navy text-lg font-semibold leading-tight">
                 Calderon
               </p>
@@ -42,8 +42,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`text-sm font-medium transition-colors relative py-1 ${
                   pathname === link.href
-                    ? "text-navy"
-                    : "text-warm-gray hover:text-navy"
+                    ? 'text-navy'
+                    : 'text-warm-gray hover:text-navy'
                 }`}
               >
                 {link.label}
@@ -101,8 +101,8 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className={`block py-3 px-2 text-base font-medium rounded-lg transition-colors ${
                   pathname === link.href
-                    ? "text-navy bg-slate/50"
-                    : "text-warm-gray hover:text-navy hover:bg-slate/30"
+                    ? 'text-navy bg-slate/50'
+                    : 'text-warm-gray hover:text-navy hover:bg-slate/30'
                 }`}
               >
                 {link.label}
